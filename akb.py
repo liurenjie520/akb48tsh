@@ -7,10 +7,18 @@ def yujin():
     URL = 'http://www.akb48-china.com/trip/?tx_newsfrontedit_news[action]=ajaxdata'
 
 
+    y=datetime.datetime.now().year
+    m=datetime.datetime.now().month
+    # print(y)
+    yearr=str(y)+"-"+str(m)
+    # print(yearr)
+
+
+
 
     params = {
         'act': 'monthData',
-        'year': '2021-09'
+        'year': yearr
     }
 
     response_ = requests.post(URL, params=params)
