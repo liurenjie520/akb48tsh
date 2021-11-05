@@ -8,7 +8,7 @@ class Default:
     year = str(year)
     other = "other2021.json"
     yj = year+".json"
-    name = "行程"
+    name = "月行程"
 
 class MonthDate:
     # pool of month and date
