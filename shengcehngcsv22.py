@@ -15,7 +15,7 @@ def sd():
     with open(file="akb48tsh.ics", encoding="utf8", mode="w") as file_object:
         start_string = "BEGIN:VCALENDAR\nVERSION:2.0\nCALSCALE:GREGORIAN\nMETHOD:PUBLISH\nX-WR-CALNAME:" \
                        + config.Default.name + "\nX-WR-TIMEZONE:Asia/Shanghai\n" \
-                       + "X-WR-CALDESC:"+d+"月行程\n"
+                       + "X-WR-CALDESC:"+d+"行程\n"
         file_object.write(start_string)
         body = akb.sdf()
         body_string = ("BEGIN:VEVENT\nDTSTAMP:20190912T184136Z\nUID:",
@@ -26,7 +26,7 @@ def sd():
             body2 = "DTSTART;VALUE=DATE:" + item[1] + "\nDTEND;VALUE=DATE:" + item[1] + "\n"
 
             body3 = "SUMMARY:" + item[0] + "\n"
-            tixing0="BEGIN:VALARM"+"\n"+"TRIGGER;VALUE=DATE-TIME:"+item[1]+"T000800Z"+"\n"
+            tixing0="BEGIN:VALARM"+"\n"+"TRIGGER;VALUE=DATE-TIME:"+item[1]+"T000100Z"+"\n"
             tixing1="ACTION:DISPLAY"+"\n"+"END:VALARM"+"\n"
             body4 = body_string[1]
             full_body = body0 + body1 + body2 + body3 + tixing0 + tixing1 + body4
