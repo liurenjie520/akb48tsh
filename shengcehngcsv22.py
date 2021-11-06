@@ -8,6 +8,7 @@ import datetime
 
 import config
 import akb
+import shuijishu
 def sd():
     now_time = datetime.datetime.now()
     d = datetime.datetime.now().strftime('%Y%m%d')
@@ -22,7 +23,7 @@ def sd():
                        "END:VEVENT\n")
         for item in body:
             body0 = body_string[0]
-            body1 = item[1] + 'almanac_in_' + config.Default.year + "\n"
+            body1 = item[1] + 'almanac_in_' + shuijishu.suiji() + "\n"
             body2 = "DTSTART;VALUE=DATE:" + item[1] + "\nDTEND;VALUE=DATE:" + item[1] + "\n"
 
             body3 = "SUMMARY:" + item[0] + "\n"
