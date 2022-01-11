@@ -26,7 +26,7 @@ def sd():
             body1 = item[1] + 'almanac_in_' + shuijishu.suiji() + "\n"
             body2 = "DTSTART;VALUE=DATE:" + item[1] + "\nDTEND;VALUE=DATE:" + item[1] + "\n"
 
-            body3 = "SUMMARY:" + item[0] + "\n"
+            body3 = "SUMMARY:" + item[0] + "－来自akb48teamsh"+ "\n"
             tixing0="BEGIN:VALARM"+"\n"+"TRIGGER;VALUE=DATE-TIME:"+item[1]+"T000100Z"+"\n"
             tixing1="ACTION:DISPLAY"+"\n"+"END:VALARM"+"\n"
             body4 = body_string[1]
